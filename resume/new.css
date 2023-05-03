@@ -1,0 +1,62 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+}
+header .top {
+  display: flex;
+  justify-content: space-between;
+}
+.top .man {
+}
+.top .man img {
+  max-width: 100px;
+}
+
+.bottom-container {
+  background-color: #10121b66;
+  position: relative;
+  top: -3px;
+}
+header .bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1140px;
+  margin: auto;
+}
+
+.nav-icon img {
+  max-width: 35px;
+}
+.scnd-img {
+  flex: 0.5;
+}
+.scnd-img img {
+  max-width: 100px;
+  border-radius: 50%;
+  aspect-ratio: 1/1;
+}
+
+.nav-icons {
+  display: flex;
+  flex: 1;
+  justify-content: space-between;
+}
+
+
+/* main  */
+main .content {
+    max-width: 1140px;
+    margin: auto;
+}
+
+#about .title, #edu .title, #exp .title {
+ background-color: #10121b66;
+ border-radius: 50px;
+ padding: 4px;
+ text-align: right;
+}

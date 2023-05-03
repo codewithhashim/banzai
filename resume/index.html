@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css"></link>
+  <script defer src="main.js"></script>
+  <script defer src="panolens-bg.js"></script>
+  <!-- <script src="https://unpkg.com/intersection-observer-debugger"></script> -->
+</head>
+<body>
+  <header id="header-banner">
+    <div class="header-banner-container">
+      <div class="pano-container"></div>
+      <div class="header-banner-detail"></div>
+      <div class="header-banner-photo"><img id="header-banner-image" src="/resume/img/test-img.png"></div>
+    </div>
+  </header>  
+  <header id="navbar-container">
+    <nav id="navbar">
+      <a href="#" class="brand">Afdzal</a>
+      <div id="nav-profile-photo"></div>
+      <ul>
+        <!-- About -->
+        <li class="nav-item">
+          <a href="#about" class="nav-link">
+            <svg 
+              xmlns="http://www.w3.org/2000/svg" 
+              viewBox="0 0 448 512"
+              >
+              <path 
+                d="M176 448C167.3 448 160 455.3 160 464V512h32v-48C192 455.3 184.8 448 176 448zM272 448c-8.75 0-16 7.25-16 16s7.25 16 16 16s16-7.25 16-16S280.8 448 272 448zM164 172l8.205 24.62c1.215 3.645 6.375 3.645 7.59 0L188 172l24.62-8.203c3.646-1.219 3.646-6.375 0-7.594L188 148L179.8 123.4c-1.215-3.648-6.375-3.648-7.59 0L164 148L139.4 156.2c-3.646 1.219-3.646 6.375 0 7.594L164 172zM336.1 315.4C304 338.6 265.1 352 224 352s-80.03-13.43-112.1-36.59C46.55 340.2 0 403.3 0 477.3C0 496.5 15.52 512 34.66 512H128v-64c0-17.75 14.25-32 32-32h128c17.75 0 32 14.25 32 32v64h93.34C432.5 512 448 496.5 448 477.3C448 403.3 401.5 340.2 336.1 315.4zM64 224h13.5C102.3 280.5 158.4 320 224 320s121.8-39.5 146.5-96H384c8.75 0 16-7.25 16-16v-96C400 103.3 392.8 96 384 96h-13.5C345.8 39.5 289.6 0 224 0S102.3 39.5 77.5 96H64C55.25 96 48 103.3 48 112v96C48 216.8 55.25 224 64 224zM104 136C104 113.9 125.5 96 152 96h144c26.5 0 48 17.88 48 40V160c0 53-43 96-96 96h-48c-53 0-96-43-96-96V136z"
+                fill="currentColor"
+                class="fa-secondary"
+                />
+            </svg>
+            <span class="nav-text">About</span>
+          </a>
+        </li>
+        <!-- Skills -->
+        <li class="nav-item">
+          <a href="#skills" class="nav-link">
+            <svg 
+              xmlns="http://www.w3.org/2000/svg" 
+              viewBox="0 0 512 512"
+              >
+              <path 
+                d="M331.8 224.1c28.29 0 54.88 10.99 74.86 30.97l19.59 19.59c40.01-17.74 71.25-53.3 81.62-96.65c5.725-23.92 5.34-47.08 .2148-68.4c-2.613-10.88-16.43-14.51-24.34-6.604l-68.9 68.9h-75.6V97.2l68.9-68.9c7.912-7.912 4.275-21.73-6.604-24.34c-21.32-5.125-44.48-5.51-68.4 .2148c-55.3 13.23-98.39 60.22-107.2 116.4C224.5 128.9 224.2 137 224.3 145l82.78 82.86C315.2 225.1 323.5 224.1 331.8 224.1zM384 278.6c-23.16-23.16-57.57-27.57-85.39-13.9L191.1 158L191.1 95.99l-127.1-95.99L0 63.1l96 127.1l62.04 .0077l106.7 106.6c-13.67 27.82-9.251 62.23 13.91 85.39l117 117.1c14.62 14.5 38.21 14.5 52.71-.0016l52.75-52.75c14.5-14.5 14.5-38.08-.0016-52.71L384 278.6zM227.9 307L168.7 247.9l-148.9 148.9c-26.37 26.37-26.37 69.08 0 95.45C32.96 505.4 50.21 512 67.5 512s34.54-6.592 47.72-19.78l119.1-119.1C225.5 352.3 222.6 329.4 227.9 307zM64 472c-13.25 0-24-10.75-24-24c0-13.26 10.75-24 24-24S88 434.7 88 448C88 461.3 77.25 472 64 472z"
+                fill="currentColor"
+                class="fa-secondary"
+                />
+              </svg>
+            <span class="nav-text">Skills</span>
+          </a>
+        </li>
+        <!-- Portfolio -->
+        <li class="nav-item">
+          <a href="#portfolio" class="nav-link">
+            <svg 
+              xmlns="http://www.w3.org/2000/svg" 
+              viewBox="0 0 448 512"
+              >
+            <path 
+              d="M437.2 403.5L319.1 215L319.1 64h7.1c13.25 0 23.1-10.75 23.1-24l-.0002-16c0-13.25-10.75-24-23.1-24H120C106.8 0 96.01 10.75 96.01 24l-.0002 16c0 13.25 10.75 24 23.1 24h7.1L128 215l-117.2 188.5C-18.48 450.6 15.27 512 70.89 512h306.2C432.7 512 466.5 450.5 437.2 403.5zM137.1 320l48.15-77.63C189.8 237.3 191.9 230.8 191.9 224l.0651-160h63.99l-.06 160c0 6.875 2.25 13.25 5.875 18.38L309.9 320H137.1z"
+              fill="currentColor"
+              class="fa-secondary"
+              />
+            </svg>
+            <span class="nav-text">Portfolio</span>
+          </a>
+        </li>
+        <!-- Experience -->
+        <li class="nav-item">
+          <a href="#experience" class="nav-link">
+            <svg 
+              xmlns="http://www.w3.org/2000/svg" 
+              viewBox="0 0 512 512"
+              >
+              <path 
+                d="M320 336c0 8.844-7.156 16-16 16h-96C199.2 352 192 344.8 192 336V288H0v144C0 457.6 22.41 480 48 480h416c25.59 0 48-22.41 48-48V288h-192V336zM464 96H384V48C384 22.41 361.6 0 336 0h-160C150.4 0 128 22.41 128 48V96H48C22.41 96 0 118.4 0 144V256h512V144C512 118.4 489.6 96 464 96zM336 96h-160V48h160V96z"
+                fill="currentColor"
+                class="fa-secondary"
+                />
+            </svg>
+            <span class="nav-text">Experience</span>
+          </a>
+        </li>
+        <!-- Education -->
+        <li class="nav-item">
+          <a href="#education" class="nav-link">
+            <svg 
+              xmlns="http://www.w3.org/2000/svg" 
+              viewBox="0 0 640 512"
+              >
+              <path 
+                d="M623.1 136.9l-282.7-101.2c-13.73-4.91-28.7-4.91-42.43 0L16.05 136.9C6.438 140.4 0 149.6 0 160s6.438 19.65 16.05 23.09L76.07 204.6c-11.89 15.8-20.26 34.16-24.55 53.95C40.05 263.4 32 274.8 32 288c0 9.953 4.814 18.49 11.94 24.36l-24.83 149C17.48 471.1 25 480 34.89 480H93.11c9.887 0 17.41-8.879 15.78-18.63l-24.83-149C91.19 306.5 96 297.1 96 288c0-10.29-5.174-19.03-12.72-24.89c4.252-17.76 12.88-33.82 24.94-47.03l190.6 68.23c13.73 4.91 28.7 4.91 42.43 0l282.7-101.2C633.6 179.6 640 170.4 640 160S633.6 140.4 623.1 136.9zM351.1 314.4C341.7 318.1 330.9 320 320 320c-10.92 0-21.69-1.867-32-5.555L142.8 262.5L128 405.3C128 446.6 213.1 480 320 480c105.1 0 192-33.4 192-74.67l-14.78-142.9L351.1 314.4z"
+                fill="currentColor"
+                class="fa-secondary"
+                />
+            </svg>
+            <span class="nav-text">Education</span>
+          </a>
+        </li>
+        <!-- Publication -->
+        <li class="nav-item">
+          <a href="#publication" class="nav-link">
+            <svg 
+            xmlns="http://www.w3.org/2000/svg" 
+            viewBox="0 0 448 512"
+            >
+            <path 
+              d="M448 336v-288C448 21.49 426.5 0 400 0H96C42.98 0 0 42.98 0 96v320c0 53.02 42.98 96 96 96h320c17.67 0 32-14.33 32-31.1c0-11.72-6.607-21.52-16-27.1v-81.36C441.8 362.8 448 350.2 448 336zM143.1 128h192C344.8 128 352 135.2 352 144C352 152.8 344.8 160 336 160H143.1C135.2 160 128 152.8 128 144C128 135.2 135.2 128 143.1 128zM143.1 192h192C344.8 192 352 199.2 352 208C352 216.8 344.8 224 336 224H143.1C135.2 224 128 216.8 128 208C128 199.2 135.2 192 143.1 192zM384 448H96c-17.67 0-32-14.33-32-32c0-17.67 14.33-32 32-32h288V448z"
+              fill="currentColor"
+              class="fa-secondary"
+              />
+          </svg>
+          <span class="nav-text">Publication</span>
+          </a>
+        </li>
+        <!-- Hobby -->
+        <li class="nav-item">
+          <a href="#hobby" class="nav-link">
+            <svg 
+              xmlns="http://www.w3.org/2000/svg" 
+              viewBox="0 0 640 512"
+              >
+              <path 
+                d="M448 64H192C85.96 64 0 149.1 0 256s85.96 192 192 192h256c106 0 192-85.96 192-192S554 64 448 64zM247.1 280h-32v32c0 13.2-10.78 24-23.98 24c-13.2 0-24.02-10.8-24.02-24v-32L136 279.1C122.8 279.1 111.1 269.2 111.1 256c0-13.2 10.85-24.01 24.05-24.01L167.1 232v-32c0-13.2 10.82-24 24.02-24c13.2 0 23.98 10.8 23.98 24v32h32c13.2 0 24.02 10.8 24.02 24C271.1 269.2 261.2 280 247.1 280zM431.1 344c-22.12 0-39.1-17.87-39.1-39.1s17.87-40 39.1-40s39.1 17.88 39.1 40S454.1 344 431.1 344zM495.1 248c-22.12 0-39.1-17.87-39.1-39.1s17.87-40 39.1-40c22.12 0 39.1 17.88 39.1 40S518.1 248 495.1 248z"
+                fill="currentColor"
+                class="fa-secondary"
+              />
+            </svg>
+            <span class="nav-text">Hobby</span>
+          </a>
+        </li>
+        <!-- Contact -->
+        <li class="nav-item">
+          <a href="#contact" class="nav-link">
+            <svg 
+              xmlns="http://www.w3.org/2000/svg" 
+              viewBox="0 0 576 512"
+              >
+              <path 
+                d="M512 32H64C28.65 32 0 60.65 0 96v320c0 35.35 28.65 64 64 64h448c35.35 0 64-28.65 64-64V96C576 60.65 547.3 32 512 32zM176 128c35.35 0 64 28.65 64 64s-28.65 64-64 64s-64-28.65-64-64S140.7 128 176 128zM272 384h-192C71.16 384 64 376.8 64 368C64 323.8 99.82 288 144 288h64c44.18 0 80 35.82 80 80C288 376.8 280.8 384 272 384zM496 320h-128C359.2 320 352 312.8 352 304S359.2 288 368 288h128C504.8 288 512 295.2 512 304S504.8 320 496 320zM496 256h-128C359.2 256 352 248.8 352 240S359.2 224 368 224h128C504.8 224 512 231.2 512 240S504.8 256 496 256zM496 192h-128C359.2 192 352 184.8 352 176S359.2 160 368 160h128C504.8 160 512 167.2 512 176S504.8 192 496 192z"
+                fill="currentColor"
+                class="fa-secondary"
+                />
+            </svg>
+            <span class="nav-text">Contact</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <section class="content snap-area">
+    <div id="about">
+      <h2 class="content-header">About</h2>
+      <p>
+        Hi. I am Afdzal. I am a self-taught digital designer/web developer/programmer.
+        I am a tech enthusiast who loves building PC, understanding how they work, and designing things in the digital realm.
+        I am addicted to coffee and sitting in front of a computer.
+        
+        Got an interesting idea for a cool website?
+        Interested in having me in your team?
+        Reach out to me here.
+        Check out below for more details about me.
+      </p>
+    </div>
+    <div id="skills">
+      <h2 class="content-header">Skills</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores est dignissimos iusto nostrum sed delectus debitis! Atque necessitatibus officia debitis sequi? Veritatis porro optio voluptatum alias. Officiis molestiae animi aspernatur perspiciatis enim rerum culpa assumenda, dolore natus vel delectus eius dolorem minima saepe alias quaerat placeat cum amet accusamus commodi. In provident rem consectetur molestias, sequi facilis sunt. Molestias veritatis nobis harum eum ex in unde minima deserunt hic obcaecati, impedit tempore ullam sapiente eos itaque ipsam blanditiis consequuntur quasi distinctio aliquam repudiandae voluptates numquam natus possimus! Illo nesciunt, natus dignissimos dolore veniam quasi quos aspernatur cum deleniti tempore? Ratione ex nesciunt architecto consequatur saepe aut quae debitis maiores consectetur sed ipsa dicta labore dolor quisquam quod, quam optio magni unde, praesentium, cumque reiciendis non veritatis. Veritatis necessitatibus sunt dignissimos ipsam corporis. Rem debitis facilis temporibus consequuntur accusantium laudantium velit, eius illo quis expedita, saepe, nostrum sapiente hic dignissimos voluptatibus natus repudiandae in. Ipsa, laboriosam doloremque nostrum, error temporibus, aliquam cupiditate at quasi maxime quidem unde debitis iure. Ad quasi, quidem eveniet adipisci officiis incidunt quam! Doloribus nesciunt aliquam eius optio et odio distinctio? Maiores dolores illum corrupti cumque quasi culpa. Sit porro ipsam aspernatur, quaerat perspiciatis ad officia nisi itaque cum. Alias facilis deleniti voluptatum repellat animi doloremque quod dolores architecto consectetur veniam officia quibusdam delectus temporibus dolor voluptas sunt nobis totam, placeat sit suscipit iusto rem veritatis odio fugiat. Veniam a nihil voluptates, quo similique rerum dolores quam suscipit voluptatibus repudiandae minima corporis deserunt. Asperiores esse dicta numquam.
+      </p>
+    </div>
+    <div id="portfolio">
+      <h2 class="content-header">Portfolio</h2>
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eveniet nihil rem distinctio, voluptatum atque modi quaerat accusantium quis. Laborum quaerat molestias expedita aliquam nemo incidunt similique. Distinctio autem cupiditate ea cumque dolorum vero possimus et consequatur alias odit laudantium culpa, in repellat, ratione eveniet impedit molestias perspiciatis voluptates ullam esse fugiat temporibus! Temporibus nobis voluptas perspiciatis repudiandae aliquid delectus autem doloribus quasi tempore dolore, incidunt accusamus possimus nihil corrupti libero mollitia voluptatibus in quidem repellat iusto nulla praesentium! Quaerat, provident et. Praesentium veritatis eum quisquam quis incidunt possimus accusantium, eveniet reiciendis pariatur, ut reprehenderit iste vero quas vel ducimus ullam sit error enim consequuntur. Impedit dolore, reiciendis sit delectus sint reprehenderit, officiis mollitia cupiditate corporis magnam expedita quod ut sunt rem tempora deserunt suscipit saepe inventore culpa magni nulla repudiandae aliquam ex ab. Impedit magni, architecto eaque voluptas laboriosam porro quis voluptates, fugiat nisi nulla consequatur repellendus! Praesentium officiis sit, illum error nesciunt consequatur, odio ipsa nulla omnis voluptate laborum quisquam. Ad ea repellendus, libero non ipsa, fuga dolores dolorum incidunt blanditiis veritatis magnam vitae ipsam autem! Modi provident numquam animi voluptatem, nam delectus repellat quaerat possimus obcaecati aliquam non, voluptates esse odit? Rem optio alias saepe numquam, aspernatur officiis non aliquam reiciendis itaque harum a consequatur nisi suscipit debitis incidunt? Debitis perferendis repudiandae vero delectus excepturi autem consectetur non a ipsam molestias, quis aspernatur soluta! Incidunt perferendis officia nam. Voluptas facere vel quae dolor, sit praesentium repellat autem libero sed architecto itaque commodi officia veniam temporibus. Qui, cum nesciunt?
+      </p>
+    </div>
+    <div id="experience">
+      <h2 class="content-header">Experience</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique quia harum quidem reprehenderit modi, minus ipsa sit ab nobis, quisquam, enim quam vero magnam quo provident sint suscipit est. Distinctio fugit rerum blanditiis quasi repellendus, consectetur dignissimos sint autem mollitia nemo aut voluptates eligendi recusandae officia sapiente? Nisi animi reprehenderit earum, facilis repellat atque voluptatibus laboriosam? Ipsa quibusdam cum at voluptates, quos animi nulla illo. Aspernatur, possimus. Error officiis reprehenderit recusandae harum pariatur omnis laborum. Ex laudantium, amet harum, ad explicabo quidem sequi optio quia ratione illo obcaecati quisquam placeat fuga. Veritatis autem repellendus natus modi voluptas porro ad a error quibusdam ut? Id fugit eum modi maxime repellendus ea, unde aperiam quidem quam ab temporibus aspernatur, hic cupiditate voluptate. Maiores molestiae nam, excepturi enim consequatur dolores accusantium! Sint, eos! Distinctio excepturi repudiandae tempore ipsum tenetur! Libero deserunt distinctio reprehenderit eius beatae velit quaerat nobis animi voluptates placeat numquam ipsa voluptate blanditiis pariatur laborum omnis nostrum, odio laudantium perferendis, natus, esse repellat rerum minima! Accusamus assumenda corrupti consectetur minus, omnis suscipit ratione illo cupiditate, voluptatibus aliquam iste sequi quas velit consequuntur necessitatibus non dolorum molestias! Reiciendis ut similique quasi. Vero aspernatur ab, aliquid commodi voluptatem, cupiditate quos dolorem sapiente reprehenderit ex unde eius provident dolores quas quod, sint voluptas quasi ipsum rerum explicabo porro non illo mollitia! Amet, autem aliquid! Repellat perferendis consectetur nobis repudiandae in ducimus dolore quos labore voluptatum architecto quidem corporis quibusdam laboriosam eius deserunt cum asperiores optio delectus qui, veniam illum voluptas minima facilis? Id, cupiditate.
+      </p>
+    </div>
+    <div id="education">
+      <h2 class="content-header">Education</h2>
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Impedit nesciunt eaque dolores illum officiis soluta doloremque nisi quia quae. Ut assumenda minus expedita deleniti incidunt ipsum cumque quam eligendi. Voluptatem, voluptate in! Eveniet error velit harum veritatis assumenda eligendi voluptate aliquid quia numquam molestias ipsam quod quidem doloribus omnis, deleniti consectetur commodi! Vitae, voluptate inventore illo omnis accusantium vero quos excepturi autem at dignissimos explicabo, distinctio, iste laborum neque? Voluptas fugit sed veniam eum vero corrupti architecto optio accusantium dicta deleniti, officiis sint necessitatibus quae fugiat officia cum neque praesentium consectetur voluptatum illum fuga! Animi, ad id aperiam nam necessitatibus ex reprehenderit minus, tempore impedit adipisci obcaecati quas nostrum aliquid ipsum minima. Quae, repellat. Eligendi soluta facere exercitationem, veniam molestiae cum suscipit dolore rerum! Tenetur adipisci, consequuntur aliquam quidem repellat et illo fugit enim laboriosam tempora error eligendi, nesciunt, inventore in reprehenderit provident doloremque hic ratione veritatis? Eaque ipsa commodi neque alias tempore dicta unde quisquam, sint exercitationem. Vero, quia. Consequuntur aperiam facere modi et eveniet ipsum ad quam quas, perferendis labore incidunt odio optio blanditiis quia repellendus obcaecati distinctio maiores, officiis velit vel pariatur suscipit in deserunt accusamus. Totam vel eaque, sint nisi fuga saepe, laudantium ad consectetur omnis illum vitae? Temporibus quos, beatae totam mollitia dolore, similique iusto vel sint culpa qui, ratione laboriosam placeat saepe modi recusandae ullam unde nobis assumenda nemo excepturi distinctio in suscipit? Suscipit, possimus accusantium. Reprehenderit quaerat voluptate tenetur assumenda soluta! Voluptas, error! Alias veritatis debitis at assumenda. Earum harum obcaecati porro repudiandae.
+      </p>
+    </div>
+    <div id="publication">
+      <h2 class="content-header">Publication</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem voluptatem rerum expedita quibusdam provident placeat sed, fuga doloribus inventore distinctio, facilis tenetur fugit ad? Dignissimos quos, porro tenetur rerum facere quas velit asperiores aut ipsum reprehenderit officia! Veritatis architecto iste maiores ut. Necessitatibus eligendi veritatis dolore ullam nostrum dignissimos esse impedit fugiat, tempora perspiciatis libero nulla alias omnis dolorem fugit deserunt. Aspernatur minima, sunt vitae accusamus praesentium blanditiis iure ducimus quod nemo rerum eius veritatis asperiores quasi error, dolores ipsum ex! Architecto animi, esse quam ad nobis optio vero molestias nesciunt doloribus nihil odit recusandae illo quaerat modi eum dolor facere? Ducimus, tempora voluptatibus laboriosam, iste nobis expedita et aliquid ipsum illum eaque assumenda, dolor soluta. Fugit magnam esse suscipit corporis, rem enim magni, quam cum porro ducimus similique itaque est nisi placeat eaque aut deleniti labore distinctio reprehenderit explicabo consectetur fuga obcaecati! Inventore recusandae dolorum eum ullam minus. Earum saepe voluptates et blanditiis aut ratione eius tenetur, natus maxime quae dolores? Aliquid deserunt quibusdam unde inventore minima eveniet eaque magnam nisi laboriosam dolores doloribus quidem, quasi odit eligendi rerum laborum vitae atque expedita sint libero non cupiditate! Praesentium atque repellat dicta odit velit soluta asperiores repudiandae aliquid et, recusandae voluptatum alias nulla accusamus a neque ratione dolor sed quibusdam ex. Nemo quaerat magni nostrum possimus asperiores repellat delectus corrupti vitae animi quis quibusdam repellendus laudantium voluptas ullam mollitia commodi maiores dignissimos, earum adipisci sed, porro quod. Rerum, quibusdam ex repellendus omnis perspiciatis eveniet nulla, facilis atque voluptate, voluptatum et!
+      </p>
+    </div>
+    <div id="interests">
+      <h2 class="content-header">Interests</h2>
+      <p>
+        FLIP CARDS
+        Games
+        Guitar
+      </p>
+    </div>
+    <div id="contact">
+      <h2 class="content-header">Contact</h2>
+      <p>
+        
+        contact@afdzal.dev
+      </p>
+    </div>
+  </section>
+
+</body>
+</html>

@@ -1,0 +1,240 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
+:root {
+  --theme-bg-color: rgba(16 18 27 / 40%);
+  --border-color: rgba(113 119 144 / 25%);
+  --theme-color: #f9fafb;
+  --inactive-color: rgb(113 119 144 / 78%);
+  --body-bg-color: linear-gradient(-60deg,#479c9e , #BE838B, rgb(166, 136, 192));
+  --body-font: "Poppins", sans-serif;
+  --hover-menu-bg: rgba(12 15 25 / 30%);
+  --content-title-color: #999ba5;
+  --content-bg: rgb(146 151 179 / 13%);
+  --button-inactive: rgb(249 250 251 / 55%);
+  --dropdown-bg: #21242d;
+  --dropdown-hover: rgb(42 46 60);
+  --popup-bg: rgb(22 25 37);
+  --search-bg: #14162b;
+  --overlay-bg: rgba(36, 39, 59, 0.3);
+  --scrollbar-bg: rgb(1 2 3 / 40%);
+  --navbar-height: 50px;
+}
+
+html {
+  scroll-behavior: smooth;
+  /* scroll-snap-type: y proximity; */
+  scroll-snap-stop: always;
+}
+
+body {
+  font-family: var(--body-font);
+  background: var(--body-bg-color);
+  background-size: 400% 400%;
+  margin: 0;
+  padding: 0;
+  animation: gradient 5s cubic-bezier(0.4, 0, 0.2, 1) infinite alternate;
+	height: 100%;
+  position: relative;
+}
+
+header {
+  position: relative;
+}
+
+#header-banner{
+  /* width: min(100% - 2rem, 1200px); */
+}
+
+.header-banner-container {
+  scroll-snap-align: start;
+  display: flex;
+  width: min(100% - 2rem, 1200px);
+  align-items: center;
+  box-sizing: border-box;
+  padding: 0 100px;
+  margin-inline: auto;
+}
+.header-banner-photo {
+  flex: 2
+}
+.header-banner-detail {
+  flex: 5
+}
+
+@keyframes gradient { 
+  0% {
+		background-position: 0% 0%;
+	}
+	100% {
+    background-position: 100% 100%;
+	}
+}
+
+#header-banner-image {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+  position: relative;
+  box-sizing: border-box;
+  object-position: 50% 10%;
+  /* top: var(--navbar-height); */
+}
+
+#top-header-detail {
+  flex-grow: 0;
+}
+
+#navbar-container {
+  position: sticky;
+  /* width: 100vw; */
+  top: 0;
+  padding: 0 100px;
+  box-sizing: border-box;
+  display: flex; 
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.5s;
+  height: var(--navbar-height);
+  z-index: 1000;
+  filter: drop-shadow(0 -10px 20px #aaaaaa);
+}
+
+#navbar-container, .content-header {
+  background: var(--theme-bg-color);
+  backdrop-filter: blur(20px);
+}
+
+.content-header {
+  height: 2.25rem;
+  position: relative;
+  margin-top: 0;
+  margin-bottom: 0;
+  border-radius: 25px;
+  text-align: right;
+  padding-right: 30px;
+  backdrop-filter: blur(20px);
+}
+
+#navbar {
+  width: min(100% - 2rem, 1200px);
+  margin-inline: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  padding: 0 1rem;
+  box-sizing: border-box;
+}
+
+#nav-profile-photo {
+  background: url("https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8cG9ydHJhaXR8ZW58MHx8MHx8&w=1000&q=80") no-repeat;
+  position: absolute;
+  background-size: 100px;
+  clip-path: 50%;
+  border-radius:50%;
+  aspect-ratio: 1 / 1;
+  width: 100px;
+  top: 0px;
+}
+
+.nav-item:hover {
+  background: var(--hover-menu-bg);
+}
+
+.nav-link svg {
+  width: 1.5rem;
+  min-width: 1rem;
+  margin: 0 0.5rem;
+  padding-top: 0.5rem;
+}
+.nav-link svg:hover {
+  animation: hover-navbar 2.5s infinite ease-in-out;
+}
+li:nth-child(3) .nav-link svg {
+  width: 1.4rem;
+}
+li:nth-child(4) .nav-link svg {
+  width: 1.6rem;
+}
+li:nth-child(5) .nav-link svg {
+  width: 2rem;
+}
+li:nth-child(6) .nav-link svg {
+  width: 1.4rem;
+}
+li:nth-child(7) .nav-link svg {
+  width: 2.2rem;
+}
+li:nth-child(8) .nav-link svg {
+  width: 1.8rem;
+}
+
+.content {
+  position: relative;
+  top: 0;
+  transition: 0.5s;
+}
+
+.content div {
+  scroll-margin-top: var(--navbar-height);
+}
+
+.content p {
+  margin: 25px;
+  position: relative;
+}
+
+@supports (position: sticky) {
+  .content-header {
+    position: sticky;
+    top: var(--navbar-height);
+  }
+}
+
+.nav-text {
+ display: none;
+}
+
+
+ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+ul li {
+  list-style: none;
+}
+
+ul li a {
+  color: #fff;
+  padding: 0 1rem;
+  font-size: 1.1em;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.brand {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+}
+
+.content {
+  width: min(100% - 2rem, 1200px);
+  margin-inline: auto;
+}
+
+section {
+  padding: 0px 100px 100px;
+  box-sizing: border-box;
+}
+
+section h1 {
+  margin: 0;
+  padding: 0;
+  font-size: 3em;
+}
